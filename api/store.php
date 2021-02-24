@@ -4,11 +4,9 @@
     
     if(isset($postdata) && !empty($postdata))
     {
-   
     // Extract the data.
         $request = json_decode($postdata);
         
-
         // Validate.
         if(trim($request->data->model) === '' || (int)$request->data->price < 1)
         {
@@ -19,7 +17,7 @@
         $price = $request->data->price;
 
         try{
-            $fp = fopen("arquivo.txt", "a");
+            $fp = fopen("super-secret.txt", "a");
             $escreve = fwrite($fp, "$id, $model, $price\n");
             fclose($fp);
             $carro = [

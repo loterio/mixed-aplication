@@ -47,8 +47,4 @@
     function getAll($carros){
         echo json_encode(['data'=>$carros]);
     }
-
-
-
-
 ?>
